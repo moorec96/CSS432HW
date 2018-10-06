@@ -29,6 +29,7 @@ void* thread_server(void* input){
 		for(int nRead = 0; (nRead += read(data->sd, databuf, BUFSIZE - nRead)) < BUFSIZE; ++count);
 		count++;
 	}
+	printf("Handling Thread");
 	//printf("Count: " + count);
 	write(data->sd, &count, sizeof(count));
 	close(data->sd);
@@ -52,9 +53,7 @@ int main(int argc, char* argv[]){
 	setsockopt(serverSd, SOL_SOCKET, SO_REUSEADDR, (char *)&on, sizeof(int));	//Make it so the socket can be resused 
 
 	bind(serverSd, (sockaddr*)&acceptSockAddr, sizeof(acceptSockAddr));	//Bind socket to address
-	printf("Here\n");
 	listen(serverSd,n);
-	printf("andHere\n");
 	sockaddr_in newSockAddr;
 	socklen_t newSockAddrSize = sizeof(newSockAddr);
 

@@ -71,6 +71,6 @@ int main(int argc, char* argv[]){
 
 	int count = 0; 
 	read(clientSd, &count, sizeof(count));
-	
+	printf("%d\n",count);
 	close(clientSd);
 }
