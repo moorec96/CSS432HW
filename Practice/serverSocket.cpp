@@ -34,7 +34,14 @@ void* thread_server(void* input){
 	gettimeofday(&end,NULL);
 	write(data->sd, &count, sizeof(count));
 
-	printf("\nData-Receiving Time:%ld usec\n", end.tv_usec - start.tv_usec);
+	long seconds = end.tv_sec - start.tv_sec;
+	long microSec = end.tv_usec - start.tv_usec;
+	if(microSec < 0){
+		seconds -= 1;
+	}
+	long totalTime = (seconds * 1000000) + abs(microSec);
+
+	printf("\nData-Receiving Time:%ld usec\n", totalTime);
 	close(data->sd);
 }
 

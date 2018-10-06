@@ -83,6 +83,12 @@ int main(int argc, char* argv[]){
 	int count = 0; 
 	read(clientSd, &count, sizeof(count));
 	gettimeofday(&end,NULL);
-	printf("Test: Data-Sending Time = %ld usec, Round-Trip Time = %ld usec, #Reads = %d\n",(end.tv_usec - start.tv_usec)/repetition, end.tv_usec - 					start.tv_usec,count);
+	long seconds = end.tv_sec - start.tv_sec;
+	long microSec = end.tv_usec - start.tv_usec;
+	if(microSec < 0){
+		seconds -= 1;
+	}
+	long totalTime = (seconds * 1000000) + abs(microSec);
+	printf("Test: Data-Sending Time = %ld usec, Round-Trip Time = %ld usec, #Reads = %d\n",totalTime/repetition, totalTime,count);
 	close(clientSd);
 }
