@@ -29,8 +29,6 @@ void* thread_server(void* input){
 		for(int nRead = 0; (nRead += read(data->sd, databuf, BUFSIZE - nRead)) < BUFSIZE; ++count);
 		count++;
 	}
-	printf("Handling Thread");
-	//printf("Count: " + count);
 	write(data->sd, &count, sizeof(count));
 	close(data->sd);
 }

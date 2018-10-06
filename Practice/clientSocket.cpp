@@ -58,11 +58,19 @@ int main(int argc, char* argv[]){
 					vector[j].iov_base = databuf[j];
 					vector[j].iov_len = bufsize;
 				}
-				write(clientSd,vector,nbufs);
+				int x = writev(clientSd,vector,nbufs);
+				if(x < 0){
+					printf("Problem with write");
+				}
 			}
 			break;
 		case 3:
-			write(clientSd,databuf, nbufs * bufsize);
+			{	
+				int x = write(clientSd,databuf, nbufs * bufsize);
+				if(x < 0){
+					printf("Problem with write");
+				}
+			}	
 			break;
 		default:
 			break;
