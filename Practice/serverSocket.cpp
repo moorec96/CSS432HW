@@ -22,14 +22,19 @@ struct thread_data{
 };
 
 void* thread_server(void* input){
+	struct timeval start, end;
 	thread_data *data = (thread_data *)(input);
 	char databuf[BUFSIZE];
 	int count = 0; 
+	gettimeofday(&start,NULL);
 	for(int i = 0; i < data->repetition; i++){
 		for(int nRead = 0; (nRead += read(data->sd, databuf, BUFSIZE - nRead)) < BUFSIZE; ++count);
 		count++;
 	}
+	gettimeofday(&end,NULL);
 	write(data->sd, &count, sizeof(count));
+
+	printf("\nData-Receiving Time:%ld usec\n", end.tv_usec - start.tv_usec);
 	close(data->sd);
 }
 

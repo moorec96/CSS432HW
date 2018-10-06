@@ -23,6 +23,8 @@ int main(int argc, char* argv[]){
 
 	char databuf[nbufs][bufsize];
 
+	struct timeval start, end, lap;
+
 	struct hostent* host = gethostbyname(server_name);
 	
 	//This sets up data structure that contains all the needed socket info
@@ -41,6 +43,7 @@ int main(int argc, char* argv[]){
 		printf("Failed to connect to server");
 	}
 	
+	gettimeofday(&start,NULL);
 	for(int i = 0; i < repetition; i++){
 		switch(type){
 		case 1: 
@@ -76,9 +79,10 @@ int main(int argc, char* argv[]){
 			break;
 		}
 	}
-
+	
 	int count = 0; 
 	read(clientSd, &count, sizeof(count));
-	printf("%d\n",count);
+	gettimeofday(&end,NULL);
+	printf("Test: Data-Sending Time = %ld usec, Round-Trip Time = %ld usec, #Reads = %d\n",(end.tv_usec - start.tv_usec)/repetition, end.tv_usec - 					start.tv_usec,count);
 	close(clientSd);
 }
