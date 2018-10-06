@@ -1,3 +1,9 @@
+/**
+	Purpose: Create a client that communicates with a server
+	Author: Caleb Moore
+	Date: 10/06/18
+*/
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -13,7 +19,7 @@
 #include <string.h>
 
 int main(int argc, char* argv[]){
-	const int server_port = atoi(argv[1]);
+	const int server_port = atoi(argv[1]);		//Take in 6 arguments for main, and assign them
 	//printf(server_port);
 	const int repetition = atoi(argv[2]);
 	const int nbufs = atoi(argv[3]);
@@ -23,9 +29,9 @@ int main(int argc, char* argv[]){
 
 	char databuf[nbufs][bufsize];
 
-	struct timeval start, end, lap;
+	struct timeval start, end, lap;	//Timers
 
-	struct hostent* host = gethostbyname(server_name);
+	struct hostent* host = gethostbyname(server_name);	//Find server with IP Address
 	
 	//This sets up data structure that contains all the needed socket info
 	sockaddr_in sendSockAddr;										//Create a new socket variable
@@ -43,8 +49,8 @@ int main(int argc, char* argv[]){
 		printf("Failed to connect to server");
 	}
 	
-	gettimeofday(&start,NULL);
-	for(int i = 0; i < repetition; i++){
+	gettimeofday(&start,NULL);					//Start timer
+	for(int i = 0; i < repetition; i++){	//Loop through sending data to server
 		switch(type){
 		case 1: 
 			for(int j = 0; j < nbufs; j++){
@@ -79,16 +85,23 @@ int main(int argc, char* argv[]){
 			break;
 		}
 	}
-	
+	gettimeofday(&lap,NULL);
+	long seconds = lap.tv_sec - start.tv_sec;	//This code prevents the time output from being negative 
+	long microSec = lap.tv_usec - start.tv_usec;
+	if(microSec < 0){
+		seconds -= 1;
+	}
+	long totalLapTime = (seconds * 1000000) + abs(microSec);
+
 	int count = 0; 
-	read(clientSd, &count, sizeof(count));
-	gettimeofday(&end,NULL);
-	long seconds = end.tv_sec - start.tv_sec;
-	long microSec = end.tv_usec - start.tv_usec;
+	read(clientSd, &count, sizeof(count));		//Read data from server
+	gettimeofday(&end,NULL);						//End timer 
+	seconds = end.tv_sec - start.tv_sec;	//This code prevents the time output from being negative 
+	microSec = end.tv_usec - start.tv_usec;
 	if(microSec < 0){
 		seconds -= 1;
 	}
 	long totalTime = (seconds * 1000000) + abs(microSec);
-	printf("Test: Data-Sending Time = %ld usec, Round-Trip Time = %ld usec, #Reads = %d\n",totalTime/repetition, totalTime,count);
-	close(clientSd);
+	printf("Test: Data-Sending Time = %ld usec, Round-Trip Time = %ld usec, #Reads = %d\n",totalLapTime, totalTime,count);
+	close(clientSd);	//Close socket
 }
