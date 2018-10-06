@@ -1,0 +1,25 @@
+Script started on Sat 06 Oct 2018 11:55:53 AM PDT
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./server 10695 20000
+Connected to new client
+Data-Receiving Time:272178 usec
+Connected to new client
+Data-Receiving Time:257673 usec
+Connected to new client
+Data-Receiving Time:260068 usec
+Connected to new client
+Data-Receiving Time:377759 usec
+Connected to new client
+Data-Receiving Time:259189 usec
+Connected to new client
+Data-Receiving Time:256865 usec
+Connected to new client
+Data-Receiving Time:817115 usec
+Connected to new client
+Data-Receiving Time:739079 usec
+Connected to new client
+Data-Receiving Time:259867 usec
+^C
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ exit
+exit
+
+Script done on Sat 06 Oct 2018 11:59:49 AM PDT

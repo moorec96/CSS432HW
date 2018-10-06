@@ -1,0 +1,24 @@
+Script started on Sat 06 Oct 2018 11:57:18 AM PDT
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172. 21.198.82 1
+Test: Data-Sending Time = 13 usec, Round-Trip Time = 272724 usec, #Reads = 22369
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172.221.198.82 1[K2
+Test: Data-Sending Time = 12 usec, Round-Trip Time = 258134 usec, #Reads = 21027
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172.221.198.82 2[K3
+Test: Data-Sending Time = 13 usec, Round-Trip Time = 260682 usec, #Reads = 21033
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ client [K[K[K[K[K[K[K./client 10695 20000 30 50 172.2 1.198.82 1
+Test: Data-Sending Time = 18 usec, Round-Trip Time = 378371 usec, #Reads = 22952
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.211.198.82 1[K2
+Test: Data-Sending Time = 12 usec, Round-Trip Time = 259706 usec, #Reads = 21032
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.211.198.82 2[K3
+Test: Data-Sending Time = 12 usec, Round-Trip Time = 257434 usec, #Reads = 22180
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.211.198.82 3[C[K1[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 172.21.[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 172.21.1[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C172.21.19[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 172.21.198[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 172.21.198.[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C6 172.21.198[1@.[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0 172.21.19[1@8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 172.21.1[1@9[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2 172.21.[1@1[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C5 172.21[1@.[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+Test: Data-Sending Time = 40 usec, Round-Trip Time = 817444 usec, #Reads = 34465
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.211.198.82 1[K2
+Test: Data-Sending Time = 36 usec, Round-Trip Time = 738688 usec, #Reads = 21037
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.211.198.82 2[K3
+Test: Data-Sending Time = 13 usec, Round-Trip Time = 260456 usec, #Reads = 21027
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ exit
+exit
+
+Script done on Sat 06 Oct 2018 11:59:42 AM PDT
