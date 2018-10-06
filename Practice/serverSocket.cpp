@@ -52,9 +52,9 @@ int main(int argc, char* argv[]){
 	setsockopt(serverSd, SOL_SOCKET, SO_REUSEADDR, (char *)&on, sizeof(int));	//Make it so the socket can be resused 
 
 	bind(serverSd, (sockaddr*)&acceptSockAddr, sizeof(acceptSockAddr));	//Bind socket to address
-
+	printf("Here\n");
 	listen(serverSd,n);
-
+	printf("andHere\n");
 	sockaddr_in newSockAddr;
 	socklen_t newSockAddrSize = sizeof(newSockAddr);
 

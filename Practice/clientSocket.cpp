@@ -44,7 +44,6 @@ int main(int argc, char* argv[]){
 	for(int i = 0; i < repetition; i++){
 		switch(type){
 		case 1: 
-			printf("It's Working");
 			for(int j = 0; j < nbufs; j++){
 				int x = write(clientSd, databuf[j], bufsize);
 				if(x < 0){
