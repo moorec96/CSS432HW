@@ -1,0 +1,27 @@
+Script started on Sat 06 Oct 2018 08:32:22 PM PDT
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ hostname -i[KI
+172.21.198.81 
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ ./server 10695 20000
+Connected to new client
+Data-Receiving Time:272396 usec
+Connected to new client
+Data-Receiving Time:257435 usec
+Connected to new client
+Data-Receiving Time:257763 usec
+Connected to new client
+Data-Receiving Time:352399 usec
+Connected to new client
+Data-Receiving Time:257974 usec
+Connected to new client
+Data-Receiving Time:742847 usec
+Connected to new client
+Data-Receiving Time:259367 usec
+Connected to new client
+Data-Receiving Time:259375 usec
+Connected to new client
+Data-Receiving Time:257452 usec
+^C
+moorec96@uw1-320-01:~/CSS432/css432HW/Practice$ exit
+exit
+
+Script done on Sat 06 Oct 2018 08:34:40 PM PDT
