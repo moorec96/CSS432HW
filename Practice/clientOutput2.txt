@@ -11,7 +11,7 @@ moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.2
 Test: Data-Sending Time = 243673 usec, Round-Trip Time = 258973 usec, #Reads = 21030
 moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.21.198.81 3
 Test: Data-Sending Time = 241143 usec, Round-Trip Time = 258582 usec, #Reads = 21027
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ c[K./client 10695 20000 60 25 172.21.198.81 1
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.21.198.81 1
 Test: Data-Sending Time = 920198 usec, Round-Trip Time = 920627 usec, #Reads = 33952
 moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.21.198.81 2
 Test: Data-Sending Time = 244713 usec, Round-Trip Time = 257779 usec, #Reads = 22011

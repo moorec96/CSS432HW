@@ -30,7 +30,7 @@ struct thread_data{
 
 //Function that is called when a new thread is created
 void* thread_server(void* input){
-	struct timeval start, end;	//Used for keeping track of time
+	struct timeval start, end, total;	//Used for keeping track of time
 
 	thread_data *data = (thread_data *)(input);	//Initialize struct that contains client socket data
 	char databuf[BUFSIZE];								
@@ -43,12 +43,9 @@ void* thread_server(void* input){
 	gettimeofday(&end,NULL);							//End timer
 	write(data->sd, &count, sizeof(count));		//Write count back to client
 
-	long seconds = end.tv_sec - start.tv_sec;		//This code prevents the time output from being negative
-	long microSec = end.tv_usec - start.tv_usec;
-	if(microSec < 0){
-		seconds -= 1;
-	}
-	long totalTime = (seconds * 1000000) + abs(microSec);
+	timersub(&end,&start,&total);
+	
+	long totalTime = (total.tv_sec * 1000000) + total.tv_usec;
 
 	printf("\nData-Receiving Time:%ld usec\n", totalTime);
 	close(data->sd);	//Close Socket
