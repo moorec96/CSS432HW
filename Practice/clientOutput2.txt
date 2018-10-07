@@ -1,32 +1,23 @@
-Script started on Sat 06 Oct 2018 08:32:47 PM PDT
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172. 
-21.198.81 1
-Test: Data-Sending Time = 259130 usec, Round-Trip Time = 272919 usec, #Reads = 22231
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172.2
-21.198.81 2
-Test: Data-Sending Time = 240614 usec, Round-Trip Time = 257775 usec, #Reads = 21675
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172.2
-21.198.81 3
-Test: Data-Sending Time = 237968 usec, Round-Trip Time = 258292 usec, #Reads = 21025
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.2 
-1.198.81 1
-Test: Data-Sending Time = 351987 usec, Round-Trip Time = 352737 usec, #Reads = 22743
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.21
-1.198.81 2
-Test: Data-Sending Time = 244105 usec, Round-Trip Time = 258480 usec, #Reads = 21029
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.21
-1.198.81 3
-Test: Data-Sending Time = 759221 usec, Round-Trip Time = 742442 usec, #Reads = 21028
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.2 
-1.198.81 1
-Test: Data-Sending Time = 259685 usec, Round-Trip Time = 258927 usec, #Reads = 26511
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.21
-1.198.81 2
-Test: Data-Sending Time = 234582 usec, Round-Trip Time = 259739 usec, #Reads = 21780
-moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.21
-1.198.81 3
-Test: Data-Sending Time = 240210 usec, Round-Trip Time = 257673 usec, #Reads = 21595
+Script started on Sat 06 Oct 2018 09:48:09 PM PDT
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172.21.198.9[K81 1
+Test: Data-Sending Time = 261762 usec, Round-Trip Time = 277141 usec, #Reads = 22426
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172.21.198.81 1[K2
+Test: Data-Sending Time = 243064 usec, Round-Trip Time = 257473 usec, #Reads = 21023
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 15 100 172.21.198.81 2[K3
+Test: Data-Sending Time = 239692 usec, Round-Trip Time = 257668 usec, #Reads = 21022
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.21.198.81 1
+Test: Data-Sending Time = 392252 usec, Round-Trip Time = 393115 usec, #Reads = 22678
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.21.198.81 1[K2
+Test: Data-Sending Time = 243673 usec, Round-Trip Time = 258973 usec, #Reads = 21030
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 30 50 172.21.198.81 2[K3
+Test: Data-Sending Time = 241143 usec, Round-Trip Time = 258582 usec, #Reads = 21027
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ c[K./client 10695 20000 60 25 172.21.198.81 1
+Test: Data-Sending Time = 920198 usec, Round-Trip Time = 920627 usec, #Reads = 33952
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.21.198.81 1[K2
+Test: Data-Sending Time = 244713 usec, Round-Trip Time = 257779 usec, #Reads = 22011
+moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ ./client 10695 20000 60 25 172.21.198.81 2[K3
+Test: Data-Sending Time = 240607 usec, Round-Trip Time = 257991 usec, #Reads = 21028
 moorec96@uw1-320-02:~/CSS432/css432HW/Practice$ exit
 exit
 
-Script done on Sat 06 Oct 2018 08:34:42 PM PDT
+Script done on Sat 06 Oct 2018 09:51:08 PM PDT
