@@ -88,15 +88,9 @@ int main(int argc, char* argv[]){
 
 
 	gettimeofday(&lap,NULL);
-	unsigned long seconds = lap.tv_sec - start.tv_sec;	//This code prevents the time output from being negative 
-	unsigned long microSec = lap.tv_usec - start.tv_usec;
-	if(microSec < 0){
-		seconds -= 1;
-	}
-	unsigned long totalLapTime = (seconds * 1000000) + abs(microSec);
-
 	timersub(&lap,&start,&lapTotal);
-	printf("Lap: %lu\n", (lapTotal.tv_sec*1000000) + lapTotal.tv_usec);
+	unsigned long totalLapTime = (lapTotal.tv_sec*1000000) + lapTotal.tv_usec;
+	//printf("Lap: %lu\n", (lapTotal.tv_sec*1000000) + lapTotal.tv_usec);	
 
 
 	int count = 0; 
@@ -104,14 +98,10 @@ int main(int argc, char* argv[]){
 
 
 	gettimeofday(&end,NULL);						//End timer 
-	seconds = end.tv_sec - start.tv_sec;	//This code prevents the time output from being negative 
-	microSec = end.tv_usec - start.tv_usec;
-	if(microSec < 0){
-		seconds -= 1;
-	}
-	unsigned long totalTime = (seconds * 1000000) + abs(microSec);
 	timersub(&end,&start,&total);
-	printf("Round Trip: %lu\n", (total.tv_sec*1000000) + total.tv_usec);
-	//printf("Test: Data-Sending Time = %lu usec, Round-Trip Time = %lu usec, #Reads = %d\n",totalLapTime, totalTime,count);
+	unsigned long totalTime = (total.tv_sec*1000000) + total.tv_usec;
+	//printf("Round Trip: %lu\n", (total.tv_sec*1000000) + total.tv_usec);
+	
+	printf("Test: Data-Sending Time = %lu usec, Round-Trip Time = %lu usec, #Reads = %d\n",totalLapTime, totalTime,count);
 	close(clientSd);	//Close socket
 }
