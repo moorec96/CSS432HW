@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
 
 	char databuf[nbufs][bufsize];
 
-	struct timeval start, end, lap;	//Timers
+	struct timeval start, end, lap, total, lapTotal;	//Timers
 
 	struct hostent* host = gethostbyname(server_name);	//Find server with IP Address
 	
@@ -94,7 +94,9 @@ int main(int argc, char* argv[]){
 		seconds -= 1;
 	}
 	unsigned long totalLapTime = (seconds * 1000000) + abs(microSec);
-	//printf("Lap: %lu\n",totalLapTime);
+
+	timersub(&lap,&start,&lapTotal);
+	printf("Lap: %lu\n", (lapTotal.tv_sec*1000000) + lapTotal.tv_usec);
 
 
 	int count = 0; 
@@ -108,7 +110,8 @@ int main(int argc, char* argv[]){
 		seconds -= 1;
 	}
 	unsigned long totalTime = (seconds * 1000000) + abs(microSec);
-	//printf("RoundTrip: %lu\n",totalTime);
-	printf("Test: Data-Sending Time = %lu usec, Round-Trip Time = %lu usec, #Reads = %d\n",totalLapTime, totalTime,count);
+	timersub(&end,&start,&total);
+	printf("Round Trip: %lu\n", (total.tv_sec*1000000) + total.tv_usec);
+	//printf("Test: Data-Sending Time = %lu usec, Round-Trip Time = %lu usec, #Reads = %d\n",totalLapTime, totalTime,count);
 	close(clientSd);	//Close socket
 }
