@@ -85,23 +85,30 @@ int main(int argc, char* argv[]){
 			break;
 		}
 	}
+
+
 	gettimeofday(&lap,NULL);
-	long seconds = lap.tv_sec - start.tv_sec;	//This code prevents the time output from being negative 
-	long microSec = lap.tv_usec - start.tv_usec;
+	unsigned long seconds = lap.tv_sec - start.tv_sec;	//This code prevents the time output from being negative 
+	unsigned long microSec = lap.tv_usec - start.tv_usec;
 	if(microSec < 0){
 		seconds -= 1;
 	}
-	long totalLapTime = (seconds * 1000000) + abs(microSec);
+	unsigned long totalLapTime = (seconds * 1000000) + abs(microSec);
+	//printf("Lap: %lu\n",totalLapTime);
+
 
 	int count = 0; 
 	read(clientSd, &count, sizeof(count));		//Read data from server
+
+
 	gettimeofday(&end,NULL);						//End timer 
 	seconds = end.tv_sec - start.tv_sec;	//This code prevents the time output from being negative 
 	microSec = end.tv_usec - start.tv_usec;
 	if(microSec < 0){
 		seconds -= 1;
 	}
-	long totalTime = (seconds * 1000000) + abs(microSec);
-	printf("Test: Data-Sending Time = %ld usec, Round-Trip Time = %ld usec, #Reads = %d\n",totalLapTime, totalTime,count);
+	unsigned long totalTime = (seconds * 1000000) + abs(microSec);
+	//printf("RoundTrip: %lu\n",totalTime);
+	printf("Test: Data-Sending Time = %lu usec, Round-Trip Time = %lu usec, #Reads = %d\n",totalLapTime, totalTime,count);
 	close(clientSd);	//Close socket
 }
