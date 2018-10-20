@@ -48,12 +48,12 @@ string getFileName(char* buffer){
 
 char* getFile(char* buffer){
 	string fileName = getFileName(buffer);
-	cout << fileName << endl;
+	//cout << fileName << endl;
 	//FILE *file;
 	string buff;
 	ifstream file(fileName.c_str());
 	if(file.fail()){
-		cout << "Could not find file" << endl;
+		//cout << "Could not find file" << endl;
 		buff = http_response_404;
 	}
 	else{
@@ -113,8 +113,9 @@ int main(int argc, char* argv[]){
 		
 		char buffer[512] = {0};
 		valread = read(newSd,buffer,512);
-		cout << buffer << endl;
+		
 		char* fileBuff = getFile(buffer);
+		cout << buffer << endl;
 		send(newSd, fileBuff, strlen(fileBuff),0);
 		//send(newSd, http_response_404,strlen(http_response_404),0);
 		close(newSd);

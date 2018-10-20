@@ -84,6 +84,7 @@ string makeRequest(char* fileName, char* hostName, char* portNumber){
 	char resp[512];
 	string response = "";
 	send(retrieverSd, req, strlen(req),0);
+	cout<< req << endl;
 	//send(retrieverSd, req, sizeof(req),0);
 	while((len = recv(retrieverSd, resp,512,0)) > 0){
 		//cout << len << endl;
@@ -97,7 +98,7 @@ string makeRequest(char* fileName, char* hostName, char* portNumber){
 
 void placeIntoFile(string& buffer, string fileName){
 	int index = buffer.find("\r\n\r\n");
-	cout << buffer.substr(0,index+1) << endl << endl;
+	cout << buffer.substr(0,index+1) << endl << endl<< endl << endl << endl << endl;
 	string temp = buffer.substr(index+4);
 	char fName[fileName.length()];
 	strcpy(fName,fileName.c_str());
@@ -138,7 +139,7 @@ int main(int argc, char* argv[]){
 				fName[j+6] = tags[i][j];
 			}
 			fName[tags[i].length() + 6] = '\0';
-			cout << fName << endl;
+			//cout << fName << endl;
 			//cout << strlen(fName) << endl;
 			string f = makeRequest(fName,argv[1],portNumber);
 			//cout << fName << endl;
