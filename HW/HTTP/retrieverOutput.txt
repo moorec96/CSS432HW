@@ -1,0 +1,225 @@
+Script started on Sat 20 Oct 2018 03:06:32 PM PDT
+]0;moorec96@moorec96-VirtualBox: ~/Documents/CSS 432/CSS432HW/HW/HTTP[01;32mmoorec96@moorec96-VirtualBox[00m:[01;34m~/Documents/CSS 432/CSS432HW/HW/HTTP[00m$ ./retriever 1 
+72.21.198.87 index.html 8080
+GET index.html http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 200 OK
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/../graphics/barhome.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/../graphics/barevil.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/../graphics/barguis.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/../graphics/barfiles.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/../graphics/barabout.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/../graphics/barlinks.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/billagram2.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/billagram2.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/get_80x15_01.png http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+GET /evil/../graphics/back.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 404 Not Found
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+]0;moorec96@moorec96-VirtualBox: ~/Documents/CSS 432/CSS432HW/HW/HTTP[01;32mmoorec96@moorec96-VirtualBox[00m:[01;34m~/Documents/CSS 432/CSS432HW/HW/HTTP[00m$ .[K./retriever 17
+72.21.198.87 back.gif 8080 
+GET back.gif http/1.1
+
+Host: 172.21.198.87
+
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+
+
+HTTP/1.1 200 OK
+
+Content-Type: text/html; charset=utf-8
+
+
+
+
+
+
+]0;moorec96@moorec96-VirtualBox: ~/Documents/CSS 432/CSS432HW/HW/HTTP[01;32mmoorec96@moorec96-VirtualBox[00m:[01;34m~/Documents/CSS 432/CSS432HW/HW/HTTP[00m$ exit
+exit
+
+Script done on Sat 20 Oct 2018 03:07:05 PM PDT

@@ -1,3 +1,9 @@
+/**
+	Program: Makes HTTP GET Requests to a web server and saves the returned data
+	Author: Caleb Moore
+	Date: 10/20/18
+**/
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -17,6 +23,10 @@
 
 using namespace std;
 
+
+//This method receives a string that contains file data and runs through it looking for 
+//the keyword "src" which is in the tags of images and scripts. If the those tags are found
+//Their links are placed into a vector and returned
 vector<string> findTags(string& buffer){
 	vector<string> res;
 	vector<int> indexes;
@@ -44,14 +54,14 @@ vector<string> findTags(string& buffer){
 			newFileName += temp[i];
 		}
 		newFileName[index+1] = '\0';
-	
-		//cout << newFileName << endl;
 		res.push_back(newFileName);
-		//cout << res[res.size()-1] << endl;
 	}	
 	return res;
 }
 
+
+//This method receives a file name, hostname, and port number and opens a socket to communicate with the server
+//It then will make a GET request with the parameters given and then fill a string with the received data from the server
 string makeRequest(char* fileName, char* hostName, char* portNumber){
 	struct hostent* host = gethostbyname(hostName);
 	
@@ -85,9 +95,7 @@ string makeRequest(char* fileName, char* hostName, char* portNumber){
 	string response = "";
 	send(retrieverSd, req, strlen(req),0);
 	cout<< req << endl;
-	//send(retrieverSd, req, sizeof(req),0);
 	while((len = recv(retrieverSd, resp,512,0)) > 0){
-		//cout << len << endl;
 		resp[len+1] = '\0';
 		response.append(resp);
 	}
@@ -96,30 +104,35 @@ string makeRequest(char* fileName, char* hostName, char* portNumber){
 	return response;
 }
 
+
+//This method receives the buffer that is returned from the makeRequest() function and saves that data into a 
+//file
 void placeIntoFile(string& buffer, string fileName){
 	int index = buffer.find("\r\n\r\n");
 	cout << buffer.substr(0,index+1) << endl << endl<< endl << endl << endl << endl;
 	string temp = buffer.substr(index+4);
 	char fName[fileName.length()];
 	strcpy(fName,fileName.c_str());
-	//strcat(fName,".txt");
 	ofstream file;
 	file.open(fName);
 	file << temp;
 	file.close();
 }
 
+
+//This method returns only a files name, and not its entire path
 string getFileName(char* file){
 	string res = "";
 	int index = strlen(file)-1;
 	while(index > 0 && file[index]!= '/'){
 		res = file[ index--] + res;
 	}
-	
-	//cout << res << endl;
+
 	return res;
 }
 
+//Main runs the first request, and then depending on if there are other images/scripts in the file returned,
+//it will call more requests on those files as well
 int main(int argc, char* argv[]){
 	char* portNumber = argv[3];
 	string response = makeRequest(argv[2],argv[1],portNumber);
@@ -139,10 +152,7 @@ int main(int argc, char* argv[]){
 				fName[j+6] = tags[i][j];
 			}
 			fName[tags[i].length() + 6] = '\0';
-			//cout << fName << endl;
-			//cout << strlen(fName) << endl;
 			string f = makeRequest(fName,argv[1],portNumber);
-			//cout << fName << endl;
 			fileName = getFileName(fName);
 			placeIntoFile(f,fileName);
 		}

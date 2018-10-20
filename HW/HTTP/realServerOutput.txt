@@ -1,0 +1,204 @@
+Script started on Sat 20 Oct 2018 03:25:33 PM PDT
+]0;moorec96@moorec96-VirtualBox: ~/Documents/CSS 432/CSS432HW/HW/HTTP[01;32mmoorec96@moorec96-VirtualBox[00m:[01;34m~/Documents/CSS 432/CSS432HW/HW/HTTP[00m$ ./retriever t oastytech.com /evil/index.html 80
+GET /evil/index.html http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:25:58 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Thu, 11 Jun 2015 22:36:58 GMT
+ETag: "6319817-1a2c-557a0d8a"
+Accept-Ranges: bytes
+Content-Length: 6700
+Content-Type: text/html
+
+
+
+
+
+GET /evil/../graphics/barhome.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:05 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 12 Mar 2002 02:52:50 GMT
+ETag: "6319a16-51e-3c8d6d82"
+Accept-Ranges: bytes
+Content-Length: 1310
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/../graphics/barevil.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:12 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Sun, 19 May 2002 22:05:22 GMT
+ETag: "6319a20-5c8-3ce821a2"
+Accept-Ranges: bytes
+Content-Length: 1480
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/../graphics/barguis.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:19 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 12 Mar 2002 02:52:49 GMT
+ETag: "6319a18-47a-3c8d6d81"
+Accept-Ranges: bytes
+Content-Length: 1146
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/../graphics/barfiles.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:26 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 12 Mar 2002 02:52:52 GMT
+ETag: "6319a1e-4de-3c8d6d84"
+Accept-Ranges: bytes
+Content-Length: 1246
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/../graphics/barabout.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:33 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 12 Mar 2002 02:52:49 GMT
+ETag: "6319a1a-573-3c8d6d81"
+Accept-Ranges: bytes
+Content-Length: 1395
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/../graphics/barlinks.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:39 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Wed, 01 Dec 2010 23:58:54 GMT
+ETag: "6319a1d-4be-4cf6e13e"
+Accept-Ranges: bytes
+Content-Length: 1214
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/billagram2.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:47 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 30 Mar 2010 02:29:58 GMT
+ETag: "631982f-3626-4bb16226"
+Accept-Ranges: bytes
+Content-Length: 13862
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/billagram2.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:26:54 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 30 Mar 2010 02:29:58 GMT
+ETag: "631982f-3626-4bb16226"
+Accept-Ranges: bytes
+Content-Length: 13862
+Content-Type: image/gif
+
+
+
+
+
+GET /evil/get_80x15_01.png http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:27:01 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 30 Mar 2010 02:29:58 GMT
+ETag: "6319813-427-4bb16226"
+Accept-Ranges: bytes
+Content-Length: 1063
+Content-Type: image/png
+
+
+
+
+
+GET /evil/../graphics/back.gif http/1.1
+Host: toastytech.com
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 22:27:08 GMT
+Server: Apache/1.3.42 (Unix) PHP/4.4.9 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.8e-fips-rhel5
+Last-Modified: Tue, 12 Mar 2002 02:52:48 GMT
+ETag: "6319a17-191-3c8d6d80"
+Accept-Ranges: bytes
+Content-Length: 401
+Content-Type: image/gif
+
+
+
+
+
+]0;moorec96@moorec96-VirtualBox: ~/Documents/CSS 432/CSS432HW/HW/HTTP[01;32mmoorec96@moorec96-VirtualBox[00m:[01;34m~/Documents/CSS 432/CSS432HW/HW/HTTP[00m$ exit
+exit
+
+Script done on Sat 20 Oct 2018 03:27:21 PM PDT
