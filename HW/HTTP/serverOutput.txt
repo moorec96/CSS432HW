@@ -1,0 +1,79 @@
+Script started on Sat 20 Oct 2018 03:04:13 PM PDT
+moorec96@uw1-320-07:~/CSS432/css432HW/HW/HTTP$ ./server
+Connected to new client
+GET index.html http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/../graphics/barhome.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/../graphics/barevil.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/../graphics/barguis.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/../graphics/barfiles.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/../graphics/barabout.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/../graphics/barlinks.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/billagram2.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/billagram2.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/get_80x15_01.png http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET /evil/../graphics/back.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+Connected to new client
+GET back.gif http/1.1
+Host: 172.21.198.87
+Accept: text/html, image/png, image/jpeg, image/gif
+
+
+^C
+moorec96@uw1-320-07:~/CSS432/css432HW/HW/HTTP$ exit
+exit
+
+Script done on Sat 20 Oct 2018 03:05:20 PM PDT
