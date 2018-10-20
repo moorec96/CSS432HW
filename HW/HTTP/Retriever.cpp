@@ -52,7 +52,7 @@ vector<string> findTags(string& buffer){
 	return res;
 }
 
-string makeRequest(char* fileName, char* hostName){
+string makeRequest(char* fileName, char* hostName, char* portNumber){
 	struct hostent* host = gethostbyname(hostName);
 	
 	int retrieverSd = socket(AF_INET,SOCK_STREAM, 0);
@@ -66,7 +66,7 @@ string makeRequest(char* fileName, char* hostName){
 	bzero((char*)&sendSockAddr, sizeof(sendSockAddr));
 	sendSockAddr.sin_family = AF_INET;
 	sendSockAddr.sin_addr.s_addr = inet_addr(inet_ntoa(*(struct in_addr*)*host->h_addr_list));
-	sendSockAddr.sin_port = htons(8080);
+	sendSockAddr.sin_port = htons(atoi(portNumber));
 
 	int connectStatus = connect(retrieverSd, (sockaddr*)&sendSockAddr, sizeof(sendSockAddr));
 	if(connectStatus < 0){
@@ -120,29 +120,31 @@ string getFileName(char* file){
 }
 
 int main(int argc, char* argv[]){
-
-	string response = makeRequest(argv[2],argv[1]);
+	char* portNumber = argv[3];
+	string response = makeRequest(argv[2],argv[1],portNumber);
 	string fileName = getFileName(argv[2]);
 	placeIntoFile(response, fileName);
-	vector<string> tags = findTags(response);
-	for(int i = 0; i < tags.size(); i++){
-		char fName[tags[i].length()+5];
-		fName[0] = '/';
-		fName[1] = 'e';
-		fName[2] = 'v';
-		fName[3] = 'i';
-		fName[4] = 'l';
-		fName[5] = '/';
-		for(int j = 0; j < tags[i].length(); j++){
-			fName[j+6] = tags[i][j];
+	if(fileName.find("html") != string::npos){
+		vector<string> tags = findTags(response);
+		for(int i = 0; i < tags.size(); i++){
+			char fName[tags[i].length()+5];
+			fName[0] = '/';
+			fName[1] = 'e';
+			fName[2] = 'v';
+			fName[3] = 'i';
+			fName[4] = 'l';
+			fName[5] = '/';
+			for(int j = 0; j < tags[i].length(); j++){
+				fName[j+6] = tags[i][j];
+			}
+			fName[tags[i].length() + 6] = '\0';
+			cout << fName << endl;
+			//cout << strlen(fName) << endl;
+			string f = makeRequest(fName,argv[1],portNumber);
+			//cout << fName << endl;
+			fileName = getFileName(fName);
+			placeIntoFile(f,fileName);
 		}
-		fName[tags[i].length() + 6] = '\0';
-		cout << fName << endl;
-		//cout << strlen(fName) << endl;
-		string f = makeRequest(fName,argv[1]);
-		//cout << fName << endl;
-		fileName = getFileName(fName);
-		placeIntoFile(f,fileName);
 	}
 	
 
